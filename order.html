@@ -1,0 +1,50 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Happiness Coffee - Order Now</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script defer src="script.js"></script>
+</head> 
+<body> 
+ 
+  <nav class="navbar"> 
+    <div class="logo">😊 Happiness Coffee</div> 
+    <ul class="nav-links"> 
+      <li><a href="index.html">Home</a></li> 
+      <li><a href="menu.html">Menu</a></li> 
+      <li><a href="offers.html">Offers</a></li> 
+      <li><a href="reviews.html">Reviews</a></li> 
+      <li><a href="order.html" class="active-link">Order Now</a></li> 
+    </ul> 
+  </nav> 
+ 
+  <div id="order" class="page active" style="text-align: center; padding: 50px 20px;"> 
+    <h2 class="title-decor">Order Your Happiness Now!</h2> 
+    <p>Fill the form below and we will deliver it to your door.</p> 
+ 
+    <div class="form-container" style="display: inline-block; text-align: left; background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); width: 100%; max-width: 440px; min-width: 320px; margin-top: 20px;"> 
+      <form id="coffeeOrderForm"> 
+        <div style="margin-bottom: 15px;"> 
+          <label style="display: block; margin-bottom: 5px; color: #5c3a21; font-weight: bold;">Full Name:</label> 
+          <input type="text" id="orderName" placeholder="Enter your name" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"> 
+        </div> 
+        <div style="margin-bottom: 15px;"> 
+          <label style="display: block; margin-bottom: 5px; color: #5c3a21; font-weight: bold;">Your Order:</label> 
+          <input type="text" id="orderItems" placeholder="e.g., 1 Latte, 1 Cheesecake" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"> 
+        </div> 
+        <div style="margin-bottom: 15px;"> 
+          <label style="display: block; margin-bottom: 5px; color: #5c3a21; font-weight: bold;">Phone Number:</label> 
+          <input type="tel" id="orderPhone" placeholder="e.g., 05XXXXXXXX" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"> 
+        </div> 
+        <button type="submit" style="background-color: #5c3a21; color: #fff; border: none; padding: 12px; width: 100%; border-radius: 5px; font-size: 16px; cursor: pointer; font-weight: bold;">Confirm Order ☕</button> 
+      </form> 
+    </div> 
+ 
+    <div style="margin-top: 30px; font-weight: bold; color: #5c3a21;"> 
+      <p>📞 Emergency hotline for delivery: <span>0502239397</span></p> 
+    </div> 
+  </div> 
+ 
+</body> 
+</html>
