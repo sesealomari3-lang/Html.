@@ -1,149 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Happiness Coffee</title>
-  
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="logo">😊 Happiness Coffee</div>
-    <ul class="nav-links">
-      <li onclick="showPage('home')">Home</li>
-      <li onclick="showPage('menu')">Menu</li>
-      <li onclick="showPage('offers')">Offers</li>
-      <li onclick="showPage('reviews')">Reviews</li>
-      <li onclick="showPage('order')">Order Now</li>
-    </ul>
-  </nav>
-
-  <div id="home" class="page active">
-    <div class="quote-box">
-   <h1>Where Coffee Meets Happiness 😊</h1>
-<p>Enjoy delicious coffee, joyful moments, and a warm atmosphere every day.</p>
-    </div>
-    <div class="home-main">
-      <div class="features">
-        <ul>
-          <li>An Atmosphere Full of Joy</li>
-          <li>Affordable Prices for Everyone</li>
-          <li>High-Quality Coffee Beans</li>
-        </ul>
-        <div class="location">📍 Al Mukhwah</div>
-      </div>
-      <div class="brand-circle">
-        <h2>Happiness Coffee</h2>
-        <div class="smiley-face">
-          <div class="eyes"><span></span><span></span></div>
-          <div class="smile"></div>
-        </div>
-        <p>Your Daily Dose of Happiness</p>
-      </div>
-    </div>
-    <div class="contact-footer">
-      <p>For Delivery Call: <span class="phone">0502239397</span></p>
-    </div>
-  </div>
-
-  <div id="menu" class="page">
-    <h2 class="title-decor">Happiness Coffee Menu</h2>
-    <div class="menu-container">
-      <div class="menu-column">
-        <h3>☕ Hot Drinks</h3>
-        <table>
-          <tr><td>Arabic Coffee</td><td class="price">12 SAR</td></tr>
-          <tr><td>Espresso</td><td class="price">10 SAR</td></tr>
-          <tr><td>Americano</td><td class="price">12 SAR</td></tr>
-          <tr><td>Latte</td><td class="price">15 SAR</td></tr>
-          <tr><td>Cappuccino</td><td class="price">15 SAR</td></tr>
-          <tr><td>Mocha</td><td class="price">17 SAR</td></tr>
-        </table>
-      </div>
-      <div class="menu-column">
-        <h3>❄️ Cold Drinks</h3>
-        <table>
-          <tr><td>Iced Latte</td><td class="price">16 SAR</td></tr>
-          <tr><td>Iced Americano</td><td class="price">13 SAR</td></tr>
-          <tr><td>Frappuccino</td><td class="price">18 SAR</td></tr>
-          <tr><td>Orange Juice</td><td class="price">10 SAR</td></tr>
-          <tr><td>Mojito</td><td class="price">14 SAR</td></tr>
-        </table>
-      </div>
-      <div class="menu-column">
-        <h3>🍰 Desserts</h3>
-        <table>
-          <tr><td>Cheesecake</td><td class="price">18 SAR</td></tr>
-          <tr><td>Brownie</td><td class="price">12 SAR</td></tr>
-          <tr><td>Croissant</td><td class="price">10 SAR</td></tr>
-          <tr><td>Waffle</td><td class="price">20 SAR</td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div id="offers" class="page">
-    <div class="offers-content">
-      <div class="text-side">
-        <h1>We have special offers for happiness!</h1>
-        <p>Because your joy is our secret ingredient, we're turning every smile into a cup of happiness! 😊</p>
-        <div class="promo">
-          <p>Visit us at our Al Mukhwah branch,</p>
-          <p>smile to the barista and get Today's Coffee for: <strong>FREE!</strong></p>
-        </div>
-      </div>
-      <div class="image-side">
-          <img src="https://i.ibb.co/YTt28VFQ/5767097595208607751-121.jpg" alt="Barista Offer" >
-        </a>
-      </div>
-    </div>
-  </div>
-
-<div id="reviews" class="page">
-  <h2 class="title-decor">Happy Voices!</h2>
-  <p>What they say about us:</p>
-
-  <div class="reviews-grid" id="reviewsGrid">
-    <div class="bubble">
-      <strong>Manar:</strong>
-      <p>The best coffee in Al Mukhwah! The atmosphere is full of joy and the service is amazing.</p>
-    </div>
-
-    <div class="bubble">
-      <strong>Yara:</strong>
-      <p>"I loved the 'Smile Offer'! It's such a creative way to start the day with a free cup of happiness."</p>
-    </div>
-
-    <div class="bubble">
-      <strong>Salma:</strong>
-      <p>High-quality beans and a very professional team. Highly recommended for all coffee lovers!</p>
-    </div>
-  </div>
-
-  <div class="review-form">
-    <h3>Share Your Happiness 😊</h3>
-
-    <input type="text" id="reviewName" placeholder="Your Name">
-
-    <textarea id="reviewText" placeholder="Write your comment here..."></textarea>
-
-    <button type="button" onclick="addReview()">Submit Comment</button>
-  </div>
-</div>
-
-  <div id="order" class="page">
-    <h2 class="title-decor">Order Your Happiness</h2>
-    <div class="order-box">
-      <form id="orderForm">
-        <label>Name:</label> <input type="text" id="custName">
-        <label>Order:</label> <input type="text" id="custOrder">
-        <label>Phone:</label> <input type="text" id="custPhone">
-        <button type="button" onclick="submitForm()">Submit Order</button>
-      </form>
-      <div id="msg"></div>
-    </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Happiness Coffee - Home</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+ 
+  <nav class="navbar"> 
+    <div class="logo">😊 Happiness Coffee</div> 
+    <ul class="nav-links"> 
+      <li><a href="index.html" class="active-link">Home</a></li> 
+      <li><a href="menu.html">Menu</a></li> 
+      <li><a href="offers.html">Offers</a></li> 
+      <li><a href="reviews.html">Reviews</a></li> 
+      <li><a href="order.html">Order Now</a></li> 
+    </ul> 
+  </nav> 
+ 
+  <div id="home" class="page active"> 
+    <div class="quote-box"> 
+      <h1>Where Coffee Meets Happiness 😊</h1> 
+      <p>Enjoy delicious coffee, joyful moments, and a warm atmosphere every day.</p> 
+    </div> 
+    <div class="home-main"> 
+      <div class="features"> 
+        <ul> 
+          <li>An Atmosphere Full of Joy</li> 
+          <li>Affordable Prices for Everyone</li> 
+          <li>High-Quality Coffee Beans</li> 
+        </ul> 
+        <div class="location">📍 Al Mukhwah</div> 
+      </div> 
+      <div class="brand-circle"> 
+        <h2>Happiness Coffee</h2> 
+        <div class="smiley-face"> 
+          <div class="eyes"><span></span><span></span></div> 
+          <div class="smile"></div> 
+        </div> 
+        <p>Your Daily Dose of Happiness</p> 
+      </div> 
+    </div> 
+    <div class="contact-footer"> 
+      <p>For Delivery Call: <span class="phone">0502239397</span></p> 
+    </div> 
+  </div> 
+ 
+</body> 
 </html>
