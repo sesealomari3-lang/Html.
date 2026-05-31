@@ -23,3 +23,25 @@ function submitForm() {
     alert("Success! Your " + order + " is being prepared.");
   }
 }
+function addReview() {
+  var name = document.getElementById("reviewName").value;
+  var text = document.getElementById("reviewText").value;
+
+  if (name === "" || text === "") {
+    alert("Please enter your name and comment.");
+    return;
+  }
+
+  var reviewsGrid = document.getElementById("reviewsGrid");
+
+  var newReview = document.createElement("div");
+  newReview.className = "bubble";
+
+  newReview.innerHTML =
+    "<strong>" + name + ":</strong><p>" + text + "</p>";
+
+  reviewsGrid.appendChild(newReview);
+
+  document.getElementById("reviewName").value = "";
+  document.getElementById("reviewText").value = "";
+}
