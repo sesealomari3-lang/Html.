@@ -1,47 +1,49 @@
-function showPage(pageId) {
-  // Hide all pages
-  var pages = document.getElementsByClassName('page');
-  for (var i = 0; i < pages.length; i++) {
-    pages[i].style.display = 'none';
-  }
-  // Show selected page
-  var selected = document.getElementById(pageId);
-  if (selected) {
-    selected.style.display = 'block';
-  }
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-function submitForm() {
-  var name = document.getElementById('custName').value;
-  var order = document.getElementById('custOrder').value;
-  var msg = document.getElementById('msg');
-  
-  if (name === "" || order === "") {
-    msg.innerHTML = "<p style='color:red;'>Please fill your info!</p>";
-  } else {
-    msg.innerHTML = "<p style='color:green;'>Order Sent! Thank you " + name + "</p>";
-    alert("Success! Your " + order + " is being prepared.");
-  }
-}
-function addReview() {
-  var name = document.getElementById("reviewName").value;
-  var text = document.getElementById("reviewText").value;
+  var orderForm = document.getElementById('coffeeOrderForm');
+  if (orderForm) {
+    orderForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  if (name === "" || text === "") {
-    alert("Please enter your name and comment.");
-    return;
+      var name = document.getElementById('orderName').value.trim();
+      var order = document.getElementById('orderItems').value.trim();
+      var phone = document.getElementById('orderPhone').value.trim();
+
+      if (name === "" || order === "" || phone === "") {
+        alert("Please fill your info! ⚠️");
+      } else {
+        alert("Success! Your " + order + " is being prepared. Thank you " + name + " 😊");
+        orderForm.reset();
+      }
+    });
   }
 
-  var reviewsGrid = document.getElementById("reviewsGrid");
+  var reviewForm = document.getElementById('reviewForm');
+  if (reviewForm) {
+    reviewForm.addEventListener('submit', function (e) {
+      e.preventDefault();
 
-  var newReview = document.createElement("div");
-  newReview.className = "bubble";
+      var name = document.getElementById('revName').value.trim();
+      var text = document.getElementById('revComment').value.trim();
 
-  newReview.innerHTML =
-    "<strong>" + name + ":</strong><p>" + text + "</p>";
+      if (name === "" || text === "") {
+        alert("Please enter your name and comment.");
+        return;
+      }
 
-  reviewsGrid.appendChild(newReview);
+      var reviewsGrid = document.getElementById("reviewsGrid");
+      if (reviewsGrid) {
+        var newReview = document.createElement("div");
+        newReview.className = "bubble";
+        newReview.innerHTML = "<strong>" + name + ":</strong><p>" + text + "</p>";
+        
+        reviewsGrid.appendChild(newReview);
+      }
 
-  document.getElementById("reviewName").value = "";
-  document.getElementById("reviewText").value = "";
-}
+      document.getElementById("revName").value = "";
+      document.getElementById("revComment").value = "";
+      alert("Thank you for your feedback! 😊");
+    });
+  }
+
+});
