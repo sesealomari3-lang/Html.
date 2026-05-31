@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <title>Happiness Coffee - Reviews</title> 
+  <link rel="stylesheet" href="style.css"> 
+  <script defer src="script.js"></script>
+</head> 
+<body> 
+ 
+  <nav class="navbar"> 
+    <div class="logo">😊 Happiness Coffee</div> 
+    <ul class="nav-links"> 
+      <li><a href="index.html">Home</a></li> 
+      <li><a href="menu.html">Menu</a></li> 
+      <li><a href="offers.html">Offers</a></li> 
+      <li><a href="reviews.html" class="active-link">Reviews</a></li> 
+      <li><a href="order.html">Order Now</a></li> 
+    </ul> 
+  </nav> 
+ 
+  <div id="reviews" class="page active"> 
+    <h2 class="title-decor">Happy Voices!</h2> 
+    <p>What they say about us:</p> 
+   
+    <div class="reviews-grid" id="reviewsGrid"> 
+      <div class="bubble"> 
+        <strong>Manar:</strong> 
+        <p>The best coffee in Al Mukhwah! The atmosphere is full of joy and the service is amazing.</p> 
+      </div> 
+   
+      <div class="bubble"> 
+        <strong>Yara:</strong>
+        <p>I loved the "smile to the barista" offer! Such a creative and positive idea.</p>
+      </div> 
+      
+      <div class="bubble"> 
+        <strong>Salma:</strong>
+        <p>Great prices, outstanding quality, and very friendly staff. Highly recommended!</p>
+      </div> 
+    </div> 
+
+    <div class="review-form-container" style="margin-top: 40px; text-align: center;">
+      <h3>Share Your Happiness!</h3>
+      <form id="reviewForm" style="display: inline-block; text-align: left; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div style="margin-bottom: 10px;">
+          <label style="display:block; color:#5c3a21; font-weight:bold;">Your Name:</label>
+          <input type="text" id="revName" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px;">
+        </div>
+        <div style="margin-bottom: 10px;">
+          <label style="display:block; color:#5c3a21; font-weight:bold;">Your Comment:</label>
+          <textarea id="revComment" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 5px; height: 80px;"></textarea>
+        </div>
+        <button type="submit" style="background-color: #5c3a21; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%;">Submit Review</button>
+      </form>
+    </div>
+  </div> 
+ 
+</body> 
+</html>
